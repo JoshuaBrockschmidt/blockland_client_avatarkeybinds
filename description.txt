@@ -1,0 +1,3 @@
+Title: Avatar Favorites Keybinds
+Author: SadBlobfish (6835)
+Adds keybinds for your avatar favorites. Suggested by Edd Eddington (BLID 107032).
