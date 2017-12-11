@@ -1,12 +1,15 @@
-$remapDivision[$remapCount] = "Avatar Favorites";
-for (%i = 1; %i < 10; %i++) {
-	$remapName[$remapCount] = "Switch to Avatar Favorite #" @ %i;
-	$remapCmd[$remapCount] = "AK_select" @ %i;
+if(!$AK_isLoaded) {
+	$remapDivision[$remapCount] = "Avatar Favorites";
+	for (%AK_i = 1; %AK_i < 10; %AK_i++) {
+		$remapName[$remapCount] = "Switch to Avatar Favorite #" @ %AK_i;
+		$remapCmd[$remapCount] = "AK_select" @ %AK_i;
+		$remapCount++;
+	}
+	$remapName[$remapCount] = "Switch to Avatar Favorite #0";
+	$remapCmd[$remapCount] = "AK_select0";
 	$remapCount++;
+	$AK_isLoaded = 1;
 }
-$remapName[$remapCount] = "Switch to Avatar Favorite #0";
-$remapCmd[$remapCount] = "AK_select0";
-$remapCount++;
 
 function AK_select(%isDown, %i) {
 	if (%isDown) {
